@@ -1,5 +1,7 @@
+package flyDuckAccomplishInherit;
+
 /**
- * 类名:     RedHeadDuck
+ * 类名:     basicDuck.RedHeadDuck
  * 描述:
  * 隶属于:   SimpleDuck
  * 建立事件： 2022/5/14
@@ -11,5 +13,10 @@ public class RedHeadDuck extends Duck {
     @Override
     public void display() {
         System.out.println("我是红头鸭");
+    }
+
+    @Override
+    public void fly() {
+        // 如果 RedHeadDuck 不会只能空实现
     }
 }

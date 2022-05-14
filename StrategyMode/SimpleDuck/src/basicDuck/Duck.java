@@ -1,5 +1,7 @@
+package basicDuck;
+
 /**
- * 类名:     Duck
+ * 类名:     basicDuck.Duck
  * 描述:
  * 隶属于:   SimpleDuck
  * 建立事件： 2022/5/14

@@ -1,5 +1,7 @@
+package flyDuckAccomplishInherit;
+
 /**
- * 类名:     MallarDuck
+ * 类名:     basicDuck.MallarDuck
  * 描述:
  * 隶属于:   SimpleDuck
  * 建立事件： 2022/5/14
@@ -12,5 +14,10 @@ public class MallarDuck extends Duck {
     @Override
     public void display() {
         System.out.println("我是绿头鸭");
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("我会飞");
     }
 }

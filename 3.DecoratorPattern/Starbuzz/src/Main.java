@@ -19,5 +19,11 @@ public class Main {
         System.out.println(darkRoast.getDescription());
         System.out.println(darkRoast.getCost());
 
+        Beverage decaf = new Decaf();
+        decaf.setSize(3);
+        decaf = new Milk(decaf);
+        decaf = new Whip(decaf);
+        System.out.println(decaf.getDescription());
+        System.out.println(decaf.getCost());
     }
 }

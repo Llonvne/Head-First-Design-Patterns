@@ -9,10 +9,31 @@
  */
 abstract public class Beverage {
     //    保存描述
-    private final String description;
+    private String description = "Unknown";
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    // 0~Small 1~Medium 2~Large
+    private int size = 0;
 
     public Beverage(String description) {
         this.description = description;
+    }
+
+    //    允许初始化直接制定大小，不指定默认为小杯
+    public Beverage(int size) {
+        this.size = size;
+    }
+
+    public Beverage(String description, int size) {
+        this.description = description;
+        this.size = size;
     }
 
     public String getDescription() {

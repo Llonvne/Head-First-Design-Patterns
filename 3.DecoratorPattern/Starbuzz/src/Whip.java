@@ -9,6 +9,7 @@
  */
 public class Whip extends CondimentDecorator {
     public Whip(Beverage beverage) {
-        super(beverage, "Whip", 0.7);
+//        super(beverage, "Whip", 0.7);
+        super(beverage,"Whip",0.3,0.4,0.5);
     }
 }

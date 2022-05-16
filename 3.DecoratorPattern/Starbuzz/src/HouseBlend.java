@@ -7,7 +7,7 @@
  * 邮箱：    Work@llonvne.cn
  * Copyright (c) 2022,All rights reserved.
  */
-public class HouseBlend extends Beverage{
+public class HouseBlend extends Beverage {
 
 
     public HouseBlend() {

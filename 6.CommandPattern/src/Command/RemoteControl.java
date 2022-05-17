@@ -44,7 +44,13 @@ public class RemoteControl {
     }
 
     public void undo(){
-        undoStack.pop().undo();
+
+        if (undoStack.size() > 0){
+            undoStack.pop().undo();
+        }
+        else {
+//
+        }
     }
 
 }

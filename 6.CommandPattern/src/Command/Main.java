@@ -67,5 +67,7 @@ public class Main {
         remoteControl.setCommand(macro,macro,2);
         remoteControl.onButtonPushed(2);
         remoteControl.undo();
+        remoteControl.undo();
+
     }
 }

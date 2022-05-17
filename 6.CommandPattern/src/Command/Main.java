@@ -1,5 +1,8 @@
 package Command;
 
+import Command.GarageDoor.GarageDoor;
+import Command.GarageDoor.GarageDoorClose;
+import Command.GarageDoor.GarageDoorOpen;
 import Command.Light.Light;
 import Command.Light.LightOffCommand;
 import Command.Light.LightOnCommand;
@@ -26,5 +29,28 @@ public class Main {
         simpleRemoteControl.setCommand(lightOffCommand);
 
         simpleRemoteControl.go();
+
+        GarageDoor garageDoor = new GarageDoor();
+        Command garageDoorOpen = new GarageDoorOpen(garageDoor);
+
+        simpleRemoteControl.setCommand(garageDoorOpen);
+
+        simpleRemoteControl.go();
+
+        Command garageDoorClose = new GarageDoorClose(garageDoor);
+
+        simpleRemoteControl.setCommand(garageDoorClose);
+
+        simpleRemoteControl.go();
+
+
+        RemoteControl remoteControl = new RemoteControl();
+        remoteControl.setCommand(garageDoorOpen,garageDoorClose,0);
+        remoteControl.setCommand(lightOnCommand,lightOffCommand,1);
+
+        remoteControl.onButtonPushed(0);
+        remoteControl.offButtonPushed(1);
+
+        remoteControl.undo();
     }
 }

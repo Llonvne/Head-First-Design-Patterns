@@ -1,5 +1,7 @@
 package Command;
 
+import Command.Fan.Fan;
+import Command.Fan.FanCommand;
 import Command.GarageDoor.GarageDoor;
 import Command.GarageDoor.GarageDoorClose;
 import Command.GarageDoor.GarageDoorOpen;
@@ -51,6 +53,19 @@ public class Main {
         remoteControl.onButtonPushed(0);
         remoteControl.offButtonPushed(1);
 
+        remoteControl.undo();
+
+        Fan fan = new Fan();
+        Command fanCommand = new FanCommand(fan);
+        remoteControl.setCommand(fanCommand,fanCommand,2);
+        remoteControl.onButtonPushed(2);
+        remoteControl.onButtonPushed(2);
+        remoteControl.undo();
+
+
+        Command macro = new MacroCommands(lightOffCommand,garageDoorClose,fanCommand);
+        remoteControl.setCommand(macro,macro,2);
+        remoteControl.onButtonPushed(2);
         remoteControl.undo();
     }
 }
